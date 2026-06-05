@@ -18,6 +18,31 @@
             </ul>
     </header>
 
+    <h2>Penghitung Nilai</h2>
+
+<input type="number" id="tugas" placeholder="Nilai Tugas">
+<input type="number" id="uh" placeholder="Nilai Ulangan Harian">
+<input type="number" id="uas" placeholder="Nilai Ujian Akhir">
+
+<button onclick="hitungNilai()">Hitung</button>
+
+<p id="hasil"></p>
+
+<script>
+function hitungNilai() {
+    let tugas = parseFloat(document.getElementById("tugas").value);
+    let uh = parseFloat(document.getElementById("uh").value);
+    let uas = parseFloat(document.getElementById("uas").value);
+    
+    let nilai = 0.3*tugas + 0.3*uh + 0.4*uas;
+
+    document.getElementById("hasil").innerHTML =
+
+        "Nilai Akhir: " + nilai.toFixed(2);
+
+}
+
+</script>
     <p>Silakan lihat produk kami di <a href="https://colab.research.google.com/drive/1PThQitLQ6JWF3hUXRXT9u8iOvypiTXXl?usp=sharing">sini</a></p>
 
     <footer>
